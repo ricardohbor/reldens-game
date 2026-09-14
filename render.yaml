@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: reldens-game
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm install
+    startCommand: node .
+    autoDeploy: true
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: RELDENS_DB_CLIENT
+        value: mongodb
+      - key: RELDENS_DB_URL
+        sync: false
+      - key: RELDENS_JWT_SECRET
+        sync: false
