@@ -6,10 +6,10 @@
  * withMovement=3000 withChat=10000 node theme/plugins/bot.js --numClients 50 --room reldens-bots-forest --endpoint http://localhost:8080 --output ./logs/bots-console.log
  */
 
-const { ConfigManager } = require('reldens/lib/config/client/config-manager');
-const { ChatConst } = require('reldens/lib/chat/constants');
-const { GameClient } = require('reldens/lib/game/client/game-client');
-const { GameConst } = require('reldens/lib/game/constants');
+const { ConfigManager } = require('../../lib/config/client/config-manager');
+const { ChatConst } = require('../../lib/chat/constants');
+const { GameClient } = require('../../lib/game/client/game-client');
+const { GameConst } = require('../../lib/game/constants');
 const { sc } = require('@reldens/utils');
 let botsCounter = 1;
 let startTimer = new Date().getTime();

@@ -5,15 +5,35 @@ services:
     plan: free
     region: oregon
     buildCommand: npm install
-    startCommand: node .
+    startCommand: node start.js
     autoDeploy: true
     healthCheckPath: /
     envVars:
       - key: NODE_VERSION
         value: "20"
+      - key: RELDENS_STORAGE_DRIVER
+        value: objection-js
       - key: RELDENS_DB_CLIENT
-        value: mongodb
-      - key: RELDENS_DB_URL
-        sync: false
+        value: mysql2
+      - key: RELDENS_DB_HOST
+        value: gateway01.ap-southeast-1.prod.aws.tidbcloud.com
+      - key: RELDENS_DB_PORT
+        value: "4000"
+      - key: RELDENS_DB_NAME
+        value: reldens
+      - key: RELDENS_DB_USER
+        value: FYscajbfYTJHLSu.root
+      - key: RELDENS_DB_PASSWORD
+        value: X2zKGundSPtDPTs3
+      - key: RELDENS_DB_SSL
+        value: "1"
+      - key: RELDENS_ALLOW_RUN_BUNDLER
+        value: "0"
+      - key: RELDENS_ALLOW_BUILD_CLIENT
+        value: "0"
+      - key: RELDENS_CREATE_CONFIG_FILE
+        value: "1"
+      - key: RELDENS_ADMIN_SECRET
+        value: reldens-admin-2026-secret
       - key: RELDENS_JWT_SECRET
         sync: false

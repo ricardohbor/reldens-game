@@ -18,7 +18,7 @@ window.RELDENS_ENABLE_TRACE_FOR = Number(urlParams.get('traceFor') || 'emergency
 // debug events (warning! this will output in the console ALL the event listeners and every event fired):
 // reldens.events.debug = 'all';
 
-const { GameManager } = require('reldens/client');
+const { GameManager } = require('../../client.js');
 const { ClientPlugin } = require('../plugins/client-plugin');
 
 let reldens = new GameManager();
